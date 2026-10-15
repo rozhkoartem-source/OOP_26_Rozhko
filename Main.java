@@ -27,9 +27,18 @@ public interface NotificationUpdate {
     void sendNotification(String messageInfo);
 }
 
-
+class Account {
+    void accountInfo() {
+        System.out.println("Тут опис облікового запису");
+    }
+}
 
 public static void main(String[] args) {
-    NormalAccount account = new NormalAccount("appetizer340");
-    account.showName();
+    NormalAccount account0 = new NormalAccount("appetizer340");
+    account0.showName();
+    account0.accountName();
+    PremiumAccount account1 = new PremiumAccount("40tiledx40");
+    account1.showName();
+    account1.accountName();
+
 }

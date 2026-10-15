@@ -1,4 +1,6 @@
-abstract class Account {
+
+
+abstract class Account { //Батьківський клас
     String name;
     Account(String name) {
         this.name = name;
@@ -9,12 +11,21 @@ abstract class Account {
     }
 }
 
-class NormalAccount extends Account {
+class NormalAccount extends Account { //Дочірній клас
     NormalAccount(String name) {
+        super(name);
+    }
+    void accountName() {
+        System.out.println(name + " створено");
+    }
+}
+
+class PremiumAccount extends Account {
+    PremiumAccount(String name) {
         super(name);
     }
     @Override
     void accountName() {
-
+        System.out.println(name + " створено як Premium");
     }
 }
