@@ -27,4 +27,9 @@ public interface NotificationUpdate {
     void sendNotification(String messageInfo);
 }
 
-void main() {}
+
+
+public static void main(String[] args) {
+    NormalAccount account = new NormalAccount("appetizer340");
+    account.showName();
+}
