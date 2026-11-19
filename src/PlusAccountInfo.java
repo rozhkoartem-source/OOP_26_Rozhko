@@ -1,14 +1,19 @@
-class PlusAccountInfo extends accountInfo {
-    PlusAccountInfo(String accountName, int accountId, int accountBalance) {
-        super(accountName, accountId, accountBalance);
+class PlusAccountInfo extends accountInfo implements AccountInterface {
+    PlusAccountInfo(String accountName, int accountId, int accountBalance, String accountLocation) {
+        super(accountName, accountId, accountBalance, accountLocation);
     }
 
     @Override
-    void showStatus() {
+    public void showStatus() {
         System.out.println("Аккаунт: " + accountName);
         System.out.println("Айді: " + accountId);
         System.out.println("Гаманець: " + accountBalance);
-        System.out.println("Статус: Premium");
-        System.out.println("Можливості: Unlimited");
+        System.out.println("Регіон: " + accountLocation);
+    }
+
+    @Override
+    public void showAccountStatus() {
+        System.out.println("Статус: Basic");
+        System.out.println("Можливості: Limited");
     }
 }

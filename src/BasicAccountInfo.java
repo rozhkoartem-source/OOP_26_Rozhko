@@ -1,13 +1,18 @@
-class BasicAccountInfo extends accountInfo {
-    BasicAccountInfo(String accountName, int accountId, int accountBalance) {
-        super(accountName, accountId, accountBalance);
+class BasicAccountInfo extends accountInfo implements AccountInterface {
+    BasicAccountInfo(String accountName, int accountId, int accountBalance, String accountLocation) {
+        super(accountName, accountId, accountBalance, accountLocation);
     }
 
     @Override
-    void showStatus() {
+    public void showStatus() {
         System.out.println("Аккаунт: " + accountName);
         System.out.println("Айді: " + accountId);
         System.out.println("Гаманець: " + accountBalance);
+        System.out.println("Регіон: " + accountLocation);
+    }
+
+    @Override
+    public void showAccountStatus() {
         System.out.println("Статус: Basic");
         System.out.println("Можливості: Limited");
     }
