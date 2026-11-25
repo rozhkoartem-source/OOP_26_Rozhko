@@ -1,6 +1,7 @@
 class BasicAccountInfo extends accountInfo implements AccountInterface {
-    BasicAccountInfo(String accountName, int accountId, int accountBalance, String accountLocation) {
-        super(accountName, accountId, accountBalance, accountLocation);
+    BasicAccountInfo(String accountName, int accountId, int accountBalance, String accountLocation,
+                     int dayTime, int monthTime, int yearTime) {
+        super(accountName, accountId, accountBalance, accountLocation, dayTime, monthTime, yearTime);
     }
 
     @Override
@@ -9,6 +10,7 @@ class BasicAccountInfo extends accountInfo implements AccountInterface {
         System.out.println("Айді: " + accountId);
         System.out.println("Гаманець: " + accountBalance);
         System.out.println("Регіон: " + accountLocation);
+        System.out.println("Створено: " + dayTime + "."+ monthTime + "." + yearTime);
     }
 
     @Override
