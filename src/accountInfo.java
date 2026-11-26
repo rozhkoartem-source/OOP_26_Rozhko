@@ -3,16 +3,20 @@ public class accountInfo {
     int accountId;
     int accountBalance;
     String accountLocation;
+    String accountStatus;
+
     int dayTime;
     int monthTime;
     int yearTime;
 
     public accountInfo(String accountName, int accountId, int accountBalance, String accountLocation,
-                        int dayTime, int monthTime, int yearTime) {
+                        int dayTime, int monthTime, int yearTime, String accountStatus) {
         this.accountName = accountName;
         this.accountId = accountId;
         this.accountBalance = accountBalance;
         this.accountLocation = accountLocation;
+        this.accountStatus = accountStatus;
+
         this.dayTime = dayTime;
         this.monthTime = monthTime;
         this.yearTime = yearTime;
@@ -27,7 +31,7 @@ public class accountInfo {
     }
 
     void showAccountStatus() {
-        System.out.println("Статус: None");
-        System.out.println("Можливості: Limited");
+        System.out.println("Статус: " + accountStatus);
+        System.out.println("Можливості: ");
     }
 }
