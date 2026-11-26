@@ -32,6 +32,5 @@ public class accountInfo {
 
     void showAccountStatus() {
         System.out.println("Статус: " + accountStatus);
-        System.out.println("Можливості: ");
     }
 }
